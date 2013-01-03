@@ -1,0 +1,26 @@
+{
+    "name": "florianwolters/component-util-singleton",
+    "description": "Allows and disallows the cloning of objects as a simple-to-use component.",
+    "type": "library",
+    "keywords": ["cloning", "clone", "creation"],
+    "homepage": "http://github.com/FlorianWolters/PHP-Component-Core-Cloneable",
+    "license": "LGPL-3.0+",
+    "authors": [
+      {
+        "name": "Florian Wolters",
+        "email": "wolters.fl@gmail.com",
+        "homepage": "http://blog.florianwolters.de",
+        "role": "Developer"
+      }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-0": {
+            "FlorianWolters": [
+                "src/php"
+            ]
+        }
+    }
+}
