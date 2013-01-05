@@ -4,12 +4,19 @@
 
 **FlorianWolters\Component\Core\Cloneable** allows and disallows the cloning of objects as a simple-to-use component.
 
-The current version is **0.1.0**, which means the **API may change** until version *1.0.0*.
+## Introduction
+
+**FlorianWolters\Component\Core\Cloneable** consists of four artifacts:
+
+1. The interface `FlorianWolters\Component\Core\Cloneable\CloneableInterface`.
+2. The exception `FlorianWolters\Component\Core\Cloneable\CloneNotSupportedException`.
+3. The trait `FlorianWolters\Component\Core\Cloneable\CloneNotSupportedTrait` to indicate to the `__clone` method of a class that it is **illegal** for that method to make a field-for-field copy of instances of that class.
+4. The trait `FlorianWolters\Component\Core\Cloneable\CloneSupportedTrait` to indicate to the `__clone` method of a class that it is **legal** for that method to make a field-for-field copy of instances of that class.
 
 ## Features
 
-* Allows to disallow cloning via the magic method [`__clone`][23] by using the trait `CloneNotSupportedTrait`. When trying to copy an object via the `clone` keyword, a `CloneNotSupportedException` is thrown.
-* Allows to explicitly allow cloning via the magic method [`__clone`][23] by using the trait `CloneSupportedTrait` and/or implementing the interface `CloneableInterface`.
+* Disallows cloning via the magic method [`__clone`][23] by using the trait `CloneNotSupportedTrait`. When trying to copy an object via the `clone` keyword, a `CloneNotSupportedException` is thrown.
+* (Exlicitly) Allows cloning via the magic method [`__clone`][23] by using the trait `CloneSupportedTrait` and/or implementing the interface `CloneableInterface`.
 * Artifacts tested with both static and dynamic test procedures:
     * Dynamic component tests (unit tests) implemented using [PHPUnit][19].
     * Static code analysis performed using the following tools:
@@ -17,13 +24,16 @@ The current version is **0.1.0**, which means the **API may change** until versi
         * [PHP Mess Detector (PHPMD)][18]: Code Analyzer
         * [phpcpd][4]: Copy/Paste Detector (CPD)
         * [phpdcd][5]: Dead Code Detector (DCD)
-* Installable via [Composer][3] or [PEAR installer][11]:
-    * Provides a [Packagist][22] package which can be installed using the dependency manager [Composer][3].
-        * Click [here][21] for the package on [Packagist][22].
+* Installable via [Composer][3] or the [PEAR command line installer][11]:
+    * Provides a [Packagist][25] package which can be installed using the dependency manager [Composer][3].
+
+      Click [here][24] for the package on [Packagist][25].
     * Provides a [PEAR package][13] which can be installed using the package manager [PEAR installer][11].
-        * Click [here][9] for the [PEAR channel][12].
+
+      Click [here][9] for the [PEAR channel][12].
 * Provides a complete Application Programming Interface (API) documentation generated with the documentation generator [ApiGen][2].
-    * Click [here][1] for the current API documentation.
+
+  Click [here][1] for the current API documentation.
 * Follows the [PSR-0][6] requirements for autoloader interoperability.
 * Follows the [PSR-1][7] basic coding style guide.
 * Follows the [PSR-2][8] coding style guide.
@@ -31,7 +41,7 @@ The current version is **0.1.0**, which means the **API may change** until versi
 
 ## Requirements
 
-* [PHP][17] >=5.4
+* [PHP][17] >= 5.4
 
 ## Installation
 
@@ -63,7 +73,7 @@ If you are creating a component that relies on **FlorianWolters\Component\Core\C
 ```json
 {
     "require": {
-        "florianwolters/component-core-cloneable": "0.1.*"
+        "florianwolters/component-core-Cloneable": "0.1.*@beta"
     }
 }
 ```
@@ -126,9 +136,9 @@ You should have received a copy of the GNU Lesser General Public License along w
 [3]: http://getcomposer.org
      "Composer"
 [4]: https://github.com/sebastianbergmann/phpcpd
-     "sebastianbergmann/phpcpd · GitHub"
+     "sebastianbergmann/phpcpd Â· GitHub"
 [5]: https://github.com/sebastianbergmann/phpdcd
-     "sebastianbergmann/phpdcd · GitHub"
+     "sebastianbergmann/phpdcd Â· GitHub"
 [6]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
      "PSR-0 requirements for autoloader interoperability"
 [7]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
@@ -150,13 +160,13 @@ You should have received a copy of the GNU Lesser General Public License along w
 [15]: http://phing.info
       "Phing"
 [16]: https://github.com/stuartherbert/phix4componentdev
-      "stuartherbert/phix4componentdev · GitHub"
+      "stuartherbert/phix4componentdev Â· GitHub"
 [17]: http://php.net
       "PHP: Hypertext Preprocessor"
 [18]: http://phpmd.org
       "PHPMD - PHP Mess Detector"
 [19]: http://phpunit.de
-      "sebastianbergmann/phpunit · GitHub"
+      "sebastianbergmann/phpunit Â· GitHub"
 [20]: http://semver.org
       "Semantic Versioning"
 [21]: http://packagist.org/packages/florianwolters/component-core-cloneable
