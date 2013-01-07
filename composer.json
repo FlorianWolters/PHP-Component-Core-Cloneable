@@ -1,5 +1,5 @@
 {
-    "name": "florianwolters/component-util-singleton",
+    "name": "florianwolters/component-util-cloneable",
     "description": "Allows and disallows the cloning of objects as a simple-to-use component.",
     "type": "library",
     "keywords": ["cloning", "clone", "creation"],
