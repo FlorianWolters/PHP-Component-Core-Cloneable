@@ -11,12 +11,11 @@
 1. The interface `FlorianWolters\Component\Core\Cloneable\CloneableInterface`.
 2. The exception `FlorianWolters\Component\Core\Cloneable\CloneNotSupportedException`.
 3. The trait `FlorianWolters\Component\Core\Cloneable\CloneNotSupportedTrait` to indicate to the `__clone` method of a class that it is **illegal** for that method to make a field-for-field copy of instances of that class.
-4. The trait `FlorianWolters\Component\Core\Cloneable\CloneSupportedTrait` to indicate to the `__clone` method of a class that it is **legal** for that method to make a field-for-field copy of instances of that class.
 
 ## Features
 
 * Disallows cloning via the magic method [`__clone`][23] by using the trait `CloneNotSupportedTrait`. When trying to copy an object via the `clone` keyword, a `CloneNotSupportedException` is thrown.
-* (Exlicitly) Allows cloning via the magic method [`__clone`][23] by using the trait `CloneSupportedTrait` and/or implementing the interface `CloneableInterface`.
+* (Exlicitly) Allows cloning via the magic method [`__clone`][23] by implementing the interface `CloneableInterface`.
 * Artifacts tested with both static and dynamic test procedures:
     * Dynamic component tests (unit tests) implemented using [PHPUnit][19].
     * Static code analysis performed using the following tools:

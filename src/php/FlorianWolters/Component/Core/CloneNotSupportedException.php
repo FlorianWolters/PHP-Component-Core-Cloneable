@@ -1,5 +1,5 @@
 <?php
-namespace FlorianWolters\Component\Core\Cloneable;
+namespace FlorianWolters\Component\Core;
 
 use \Exception;
 

@@ -1,5 +1,5 @@
 <?php
-namespace FlorianWolters\Component\Core\Cloneable;
+namespace FlorianWolters\Component\Core;
 
 /**
  * Test class for {@link CloneNotSupportedTrait}.
@@ -10,7 +10,7 @@ namespace FlorianWolters\Component\Core\Cloneable;
  * @link      http://github.com/FlorianWolters/PHP-Component-Core-Cloneable
  * @since     Class available since Release 0.1.0
  *
- * @covers FlorianWolters\Component\Core\Cloneable\CloneNotSupportedTraitTest
+ * @covers FlorianWolters\Component\Core\CloneNotSupportedTraitTest
  */
 class CloneNotSupportedTraitTest extends \PHPUnit_Framework_TestCase
 {
@@ -38,7 +38,7 @@ class CloneNotSupportedTraitTest extends \PHPUnit_Framework_TestCase
      * @return void
      *
      * @coversDefaultClass __clone
-     * @expectedException FlorianWolters\Component\Core\Cloneable\CloneNotSupportedException
+     * @expectedException FlorianWolters\Component\Core\CloneNotSupportedException
      * @test
      */
     public function testMagicMethodClone()

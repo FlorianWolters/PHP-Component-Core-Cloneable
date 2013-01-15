@@ -1,5 +1,5 @@
 <?php
-namespace FlorianWolters\Component\Core\Cloneable;
+namespace FlorianWolters\Component\Core;
 
 /**
  * A class uses the {@link CloneNotSupportedTrait} to indicate to the `__clone`

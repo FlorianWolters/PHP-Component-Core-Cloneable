@@ -1,5 +1,5 @@
 <?php
-namespace FlorianWolters\Component\Core\Cloneable;
+namespace FlorianWolters\Component\Core;
 
 /**
  * A class implements the {@link CloneableInterface} to indicate to the
