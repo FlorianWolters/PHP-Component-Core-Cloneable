@@ -2,7 +2,7 @@
 namespace FlorianWolters\Component\Core;
 
 /**
- * Test class for {@link CloneNotSupportedTrait}.
+ * Test class for {@see CloneNotSupportedTrait}.
  *
  * @author    Florian Wolters <wolters.fl@gmail.com>
  * @copyright 2013 Florian Wolters

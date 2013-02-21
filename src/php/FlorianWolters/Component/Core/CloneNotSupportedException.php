@@ -5,7 +5,7 @@ use \Exception;
 
 /**
  * Thrown to indicate that the `__clone` method in a class has been called to
- * clone an object, but that the object's class does not implement the {@link
+ * clone an object, but that the object's class does not implement the {@see
  * CloneableInterface}.
  *
  * Applications that override the `__clone` method can also throw this exception

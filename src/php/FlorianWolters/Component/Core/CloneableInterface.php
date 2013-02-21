@@ -2,7 +2,7 @@
 namespace FlorianWolters\Component\Core;
 
 /**
- * A class implements the {@link CloneableInterface} to indicate to the
+ * A class implements the {@see CloneableInterface} to indicate to the
  * `__clone` method of a class that it is legal for that method to make a
  * field-for-field copy of instances of that class.
  *
