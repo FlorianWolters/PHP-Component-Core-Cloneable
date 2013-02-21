@@ -2,11 +2,11 @@
 
 [![Build Status](https://secure.travis-ci.org/FlorianWolters/PHP-Component-Core-Cloneable.png?branch=master)](http://travis-ci.org/FlorianWolters/PHP-Component-Core-Cloneable)
 
-**FlorianWolters\Component\Core\Cloneable** allows and disallows the cloning of objects as a simple-to-use PHP component.
+**FlorianWolters\Component\Core\Cloneable** is a simple-to-use [PHP][17] component which allows and disallows the cloning of objects.
 
 ## Introduction
 
-**FlorianWolters\Component\Core\Cloneable** consists of four artifacts:
+**FlorianWolters\Component\Core\Cloneable** consists of three artifacts:
 
 1. The interface `FlorianWolters\Component\Core\Cloneable\CloneableInterface`.
 2. The exception `FlorianWolters\Component\Core\Cloneable\CloneNotSupportedException`.
