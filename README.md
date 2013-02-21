@@ -2,7 +2,7 @@
 
 [![Build Status](https://secure.travis-ci.org/FlorianWolters/PHP-Component-Core-Cloneable.png?branch=master)](http://travis-ci.org/FlorianWolters/PHP-Component-Core-Cloneable)
 
-**FlorianWolters\Component\Core\Cloneable** allows and disallows the cloning of objects as a simple-to-use component.
+**FlorianWolters\Component\Core\Cloneable** allows and disallows the cloning of objects as a simple-to-use PHP component.
 
 ## Introduction
 
@@ -72,7 +72,7 @@ If you are creating a component that relies on **FlorianWolters\Component\Core\C
 ```json
 {
     "require": {
-        "florianwolters/component-core-Cloneable": "0.1.*"
+        "florianwolters/component-core-cloneable": "0.1.*"
     }
 }
 ```

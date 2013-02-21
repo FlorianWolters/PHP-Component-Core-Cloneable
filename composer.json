@@ -1,6 +1,6 @@
 {
     "name": "florianwolters/component-core-cloneable",
-    "description": "Allows and disallows the cloning of objects as a simple-to-use component.",
+    "description": "Allows and disallows the cloning of objects as a simple-to-use PHP component.",
     "type": "library",
     "keywords": ["cloning", "clone", "creation"],
     "homepage": "http://github.com/FlorianWolters/PHP-Component-Core-Cloneable",
