@@ -24,9 +24,9 @@
         * [phpcpd][4]: Copy/Paste Detector (CPD)
         * [phpdcd][5]: Dead Code Detector (DCD)
 * Installable via [Composer][3] or the [PEAR command line installer][11]:
-    * Provides a [Packagist][25] package which can be installed using the dependency manager [Composer][3].
+    * Provides a [Packagist][22] package which can be installed using the dependency manager [Composer][3].
 
-      Click [here][24] for the package on [Packagist][25].
+      Click [here][21] for the package on [Packagist][22].
     * Provides a [PEAR package][13] which can be installed using the package manager [PEAR installer][11].
 
       Click [here][9] for the [PEAR channel][12].
@@ -72,7 +72,7 @@ If you are creating a component that relies on **FlorianWolters\Component\Core\C
 ```json
 {
     "require": {
-        "florianwolters/component-core-Cloneable": "0.1.*@beta"
+        "florianwolters/component-core-Cloneable": "0.1.*"
     }
 }
 ```
