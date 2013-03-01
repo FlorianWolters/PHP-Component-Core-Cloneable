@@ -2,20 +2,22 @@
 
 [![Build Status](https://secure.travis-ci.org/FlorianWolters/PHP-Component-Core-Cloneable.png?branch=master)](http://travis-ci.org/FlorianWolters/PHP-Component-Core-Cloneable)
 
-**FlorianWolters\Component\Core\Cloneable** is a simple-to-use [PHP][17] component which allows and disallows the cloning of objects.
+**FlorianWolters\Component\Core\Cloneable** is a simple-to-use [PHP][17] component that allows and disallows the cloning of objects.
 
 ## Introduction
 
+This component is inspired by the the [Java][24] programming language.
+
 **FlorianWolters\Component\Core\Cloneable** consists of three artifacts:
 
-1. The interface `FlorianWolters\Component\Core\Cloneable\CloneableInterface`.
-2. The exception `FlorianWolters\Component\Core\Cloneable\CloneNotSupportedException`.
-3. The trait `FlorianWolters\Component\Core\Cloneable\CloneNotSupportedTrait` to indicate to the `__clone` method of a class that it is **illegal** for that method to make a field-for-field copy of instances of that class.
+1. The interface [`FlorianWolters\Component\Core\Cloneable\CloneableInterface`][25]: Indicates to the `__clone` method of a class that it is legal for that method to make a field-for-field copy of instances of that class.
+2. The exception class [`FlorianWolters\Component\Core\Cloneable\CloneNotSupportedException`][26]: Indicates that the `__clone` method in a class has been called to clone an object, but that the object's class does not implement the [`CloneableInterface`][25].
+3. The trait [`FlorianWolters\Component\Core\Cloneable\CloneNotSupportedTrait`][27]: Indicates to the `__clone` method of a class that it is **illegal** for that method to make a field-for-field copy of instances of that class.
 
 ## Features
 
-* Disallows cloning via the magic method [`__clone`][23] by using the trait `CloneNotSupportedTrait`. When trying to copy an object via the `clone` keyword, a `CloneNotSupportedException` is thrown.
-* (Exlicitly) Allows cloning via the magic method [`__clone`][23] by implementing the interface `CloneableInterface`.
+* Disallows cloning via the magic method [`__clone`][23] by using the trait [`CloneNotSupportedTrait`][27]. When trying to copy an object via the `clone` keyword, a `CloneNotSupportedException` is thrown.
+* (Exlicitly) Allows cloning via the magic method [`__clone`][23] by implementing the interface [`CloneableInterface`][25].
 * Artifacts tested with both static and dynamic test procedures:
     * Dynamic component tests (unit tests) implemented using [PHPUnit][19].
     * Static code analysis performed using the following tools:
@@ -87,7 +89,7 @@ If you are creating a component that relies on **FlorianWolters\Component\Core\C
     <package>
       <name>Cloneable</name>
       <channel>pear.florianwolters.de</channel>
-      <min>0.1.0</min>
+      <min>0.1.1</min>
       <max>0.1.99</max>
     </package>
   </required>
@@ -174,3 +176,11 @@ You should have received a copy of the GNU Lesser General Public License along w
       "Packagist"
 [23]: http://php.net/language.oop5.cloning
       "PHP: Object Cloning"
+[24]: http://java.com
+      "java.com: Java + You"
+[25]: src/php/FlorianWolters/Component/Core/CloneableInterface.php
+      "FlorianWolters\Component\Core\CloneableInterface"
+[26]: src/php/FlorianWolters/Component/Core/CloneNotSupportedException.php
+      "FlorianWolters\Component\Core\CloneNotSupportedException"
+[27]: src/php/FlorianWolters/Component/Core/CloneNotSupportedTrait.php
+      "FlorianWolters\Component\Core\CloneNotSupportedTrait"
