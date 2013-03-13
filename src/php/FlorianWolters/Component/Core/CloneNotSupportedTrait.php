@@ -2,11 +2,11 @@
 namespace FlorianWolters\Component\Core;
 
 /**
- * A class uses the {@see CloneNotSupportedTrait} to indicate to the `__clone`
- * method of a class that it is **illegal** for that method to make a
+ * A class uses the {@see CloneNotSupportedTrait} to indicate to the magic
+ * `__clone` method of a class that it is **illegal** for that method to make a
  * field-for-field copy of instances of that class.
  *
- * Invoking the `__clone` method on an instance that uses the {@see
+ * Invoking the magic `__clone` method on an instance that uses the {@see
  * CloneNotSupportedTrait} results in the exception {@see
  * CloneNotSupportedException} being thrown.
  *
@@ -25,7 +25,7 @@ trait CloneNotSupportedTrait
      * @return void
      * @throws CloneNotSupportedException Always.
      */
-    public function __clone()
+    final public function __clone()
     {
         throw new CloneNotSupportedException;
     }
