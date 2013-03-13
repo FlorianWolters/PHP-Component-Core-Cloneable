@@ -2,6 +2,7 @@
 namespace FlorianWolters\Component\Core;
 
 use FlorianWolters\Mock\Book;
+use FlorianWolters\Mock\SelfReferenceUsingDeepClone;
 
 /**
  * Test class for {@see DeepCloneTrait}.
@@ -25,7 +26,7 @@ class DeepCloneTraitTest extends CloneTraitTestAbstract
         self::$cloneTrait = __NAMESPACE__ . '\DeepCloneTrait';
         self::$authorClass = 'FlorianWolters\Mock\AuthorUsingDeepClone';
         self::$bookClass = 'FlorianWolters\Mock\BookUsingDeepClone';
-        
+
     }
 
     /**
@@ -51,5 +52,25 @@ class DeepCloneTraitTest extends CloneTraitTestAbstract
             'Name of the publisher',
             $clone->publisher->name
         );
+    }
+
+    /**
+     * @return void
+     *
+     * @coversDefaultClass __clone
+     * @test
+     */
+    public function testMagicMethodCloneCopiesSelfReference()
+    {
+        $original = new SelfReferenceUsingDeepClone;
+        $original->selfReference = &$original;
+
+        $clone = clone $original;
+
+        $this->assertInstanceOf(__NAMESPACE__ . '\CloneableInterface', $clone);
+
+        $this->assertTrue($clone === $clone->selfReference);
+        $this->assertFalse($clone === $original);
+        $this->assertFalse($clone === $original->selfReference);
     }
 }
