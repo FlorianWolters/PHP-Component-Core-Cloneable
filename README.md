@@ -8,16 +8,20 @@
 
 This component is inspired by the the [Java][24] programming language.
 
-**FlorianWolters\Component\Core\Cloneable** consists of three artifacts:
+**FlorianWolters\Component\Core\Cloneable** consists of six artifacts:
 
-1. The interface [`FlorianWolters\Component\Core\Cloneable\CloneableInterface`][25]: Indicates to the `__clone` method of a class that it is legal for that method to make a field-for-field copy of instances of that class.
-2. The exception class [`FlorianWolters\Component\Core\Cloneable\CloneNotSupportedException`][26]: Indicates that the `__clone` method in a class has been called to clone an object, but that the object's class does not implement the [`CloneableInterface`][25].
-3. The trait [`FlorianWolters\Component\Core\Cloneable\CloneNotSupportedTrait`][27]: Indicates to the `__clone` method of a class that it is **illegal** for that method to make a field-for-field copy of instances of that class.
+1. The interface [`FlorianWolters\Component\Core\CloneableInterface`][25]: Indicates to the magic [`__clone`][23] method of a class that it is legal for that method to make a field-for-field copy of instances of that class.
+2. The exception class [`FlorianWolters\Component\Core\CloneNotSupportedException`][26]: Indicates that the magic [`__clone`][23] method in a class has been called to clone an object, but that the object's class does not implement the [`CloneableInterface`][25].
+3. The trait [`FlorianWolters\Component\Core\CloneNotSupportedTrait`][27]: Indicates to the magic [`__clone`][23] method of a class that it is **illegal** for that method to make a field-for-field copy of instances of that class.
+3. The trait [`FlorianWolters\Component\Core\ShallowCloneTrait`][28]: Indicates to the magic [`__clone`][23] method of a class that it is **legal** for that method to make a **shallow** field-for-field copy of instances of that class.
+3. The trait [`FlorianWolters\Component\Core\DeepCloneTrait`][29]: Indicates to the magic [`__clone`][23] method of a class that it is **legal** for that method to make a **deep** field-for-field copy of instances of that class.
+6. The static class [`FlorianWolters\Component\Core\CloneUtils`][30]: Offers operations to clone objects.
 
 ## Features
 
 * Disallows cloning via the magic method [`__clone`][23] by using the trait [`CloneNotSupportedTrait`][27]. When trying to copy an object via the `clone` keyword, a `CloneNotSupportedException` is thrown.
-* (Exlicitly) Allows cloning via the magic method [`__clone`][23] by implementing the interface [`CloneableInterface`][25].
+* Allows (type safe) cloning via the magic method [`__clone`][23] by implementing the interface [`CloneableInterface`][25] and using one of the two traits [`ShallowCloneTrait`][28] to make a **shallow** or [`ShallowCloneTrait`][29] to make a **deep** copy of an instance of the class.
+* Allows creating **deep** copies of any object via the method `copyDeep` of the class [`CloneUtils`][30].
 * Artifacts tested with both static and dynamic test procedures:
     * Dynamic component tests (unit tests) implemented using [PHPUnit][19].
     * Static code analysis performed using the following tools:
@@ -43,6 +47,10 @@ This component is inspired by the the [Java][24] programming language.
 ## Requirements
 
 * [PHP][17] >= 5.4
+
+## Usage
+
+The best documentation for **FlorianWolters\Component\Core\Cloneable** are the unit tests, which are shipped in the package. You will find them installed into your [PEAR][10] repository, which on Linux systems is normally `/usr/share/php/test`.
 
 ## Installation
 
@@ -95,10 +103,6 @@ If you are creating a component that relies on **FlorianWolters\Component\Core\C
   </required>
 </dependencies>
 ```
-
-## Usage
-
-The best documentation for **FlorianWolters\Component\Core\Cloneable** are the unit tests, which are shipped in the package. You will find them installed into your [PEAR][10] repository, which on Linux systems is normally `/usr/share/php/test`.
 
 ## Development Environment
 
@@ -184,3 +188,9 @@ You should have received a copy of the GNU Lesser General Public License along w
       "FlorianWolters\Component\Core\CloneNotSupportedException"
 [27]: src/php/FlorianWolters/Component/Core/CloneNotSupportedTrait.php
       "FlorianWolters\Component\Core\CloneNotSupportedTrait"
+[28]: src/php/FlorianWolters/Component/Core/ShallowCloneTrait.php
+      "FlorianWolters\Component\Core\ShallowCloneTrait"
+[29]: src/php/FlorianWolters/Component/Core/DeepCloneTrait.php
+      "FlorianWolters\Component\Core\DeepCloneTrait"
+[30]: src/php/FlorianWolters/Component/Core/CloneUtils.php
+      "FlorianWolters\Component\Core\CloneUtils"
