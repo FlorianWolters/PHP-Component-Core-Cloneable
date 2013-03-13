@@ -2,7 +2,7 @@
 namespace FlorianWolters\Component\Core;
 
 /**
- * A class uses the {@see DeepCloneTrait} to indicate to the `__clone`
+ * A class uses the {@see DeepCloneTrait} to indicate to the magic `__clone`
  * method of a class that it is **legal** for that method to make a **deep*
  * field-for-field copy of instances of that class.
  *
@@ -14,14 +14,10 @@ namespace FlorianWolters\Component\Core;
  */
 trait DeepCloneTrait
 {
-    use ShallowCloneTrait {
-        __clone as shallowCloneTraitClone;
-    }
-
     /**
-     * Creates a copy of the object.
+     * Creates a copy of this object.
      *
-     * "copy" means performing a deep copy of all of the properties of the
+     * "copy" means performing a **deep** copy of all of the properties of this
      * object.
      *
      * @return void
@@ -32,20 +28,32 @@ trait DeepCloneTrait
      *                                    using this trait does not implement
      *                                    {@see CloneableInterface}.
      */
-    public function __clone()
+    final public function __clone()
     {
-        $this->shallowCloneTraitClone();
+        CloneUtils::throwCloneNotSupportedExceptionIfNotInstanceOfCloneableInterface($this);
 
         foreach ($this as $key => $value) {
             if (true === \is_object($value)) {
-                $this->throwCloneNotSupportedExceptionIfNotImplementsCloneableInterface($value);
-                $this->{$key} = clone $value;
+                CloneUtils::throwCloneNotSupportedExceptionIfNotInstanceOfCloneableInterface($value);
+
+                // Detect possible self-reference.
+                if ($this == $value) {
+                    $this->{$key} = &$this;
+                } else {
+                    $this->{$key} = CloneUtils::copy($value);
+                }
             } elseif (true === \is_array($value)) {
                 \array_walk_recursive(
                     $value,
                     function (&$element) {
-                        $this->throwCloneNotSupportedExceptionIfNotImplementsCloneableInterface($element);
-                        $element = clone $element;
+                        CloneUtils::throwCloneNotSupportedExceptionIfNotInstanceOfCloneableInterface($element);
+
+                        // Detect possible self-reference.
+                        if ($this == $element) {
+                            $element = &$this;
+                        } else {
+                            $element = CloneUtils::copy($element);
+                        }
                     }
                 );
                 $this->{$key} = $value;
