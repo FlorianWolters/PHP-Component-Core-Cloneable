@@ -85,6 +85,20 @@ ${contents}</dir>
     <changelog>
         <release>
             <version>
+                <release>0.2.0</release>
+                <api>0.2</api>
+            </version>
+            <stability>
+                <release>stable</release>
+                <api>beta</api>
+            </stability>
+            <date>2013-03-19</date>
+            <license uri="http://gnu.org/licenses/lgpl.txt">LGPL-3.0+</license>
+            <notes>Added traits for shallow and deep cloning.</notes>
+        </release>
+
+        <release>
+            <version>
                 <release>0.1.1</release>
                 <api>0.1</api>
             </version>
