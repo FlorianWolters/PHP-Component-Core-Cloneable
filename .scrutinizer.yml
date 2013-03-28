@@ -36,7 +36,7 @@ tools:
     min_tokens: 70
     excluded_dirs: [src/tests, vendor]
     names:
-      - *.php
+      - "*.php"
     enabled: true
     filter:
       paths: [src/php]
@@ -50,9 +50,9 @@ tools:
     filter:
       paths: [src/php, src/tests]
       excluded_paths: []
-      config:
-        level: psr2
-        fixers: []
+    config:
+      level: psr2
+      fixers: []
 
   php_mess_detector:
     extensions:
