@@ -57,9 +57,9 @@ final class CloneUtils
      *
      * The precise meaning of "copy" may depend on the class of the object.
      *
-     * @param CloneableInterface $source The object to clone.
+     * @param CloneableInterface $source The object to copy.
      *
-     * @return CloneableInterface The cloned object.
+     * @return CloneableInterface The copy of the object.
      */
     public static function copy(CloneableInterface $source)
     {
