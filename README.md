@@ -1,198 +1,235 @@
-# FlorianWolters\Component\Core\Cloneable
+# Component\Core\Cloneable
 
-[![Build Status](https://secure.travis-ci.org/FlorianWolters/PHP-Component-Core-Cloneable.png?branch=master)](http://travis-ci.org/FlorianWolters/PHP-Component-Core-Cloneable)
-[![Dependency Status](https://www.versioneye.com/user/projects/51c330f0007fcd000200042c/badge.png)](https://www.versioneye.com/user/projects/51c330f0007fcd000200042c)
-[![Scrutinizer](https://scrutinizer-ci.com/images/brand-navbar.png)](https://scrutinizer-ci.com/g/FlorianWolters/PHP-Component-Core-Cloneable/inspections)
+**FlorianWolters\Component\Core\Cloneable** is a simple-to-use [PHP][1] component that allows and disallows the cloning of objects.
 
-**FlorianWolters\Component\Core\Cloneable** is a simple-to-use [PHP][17] component that allows and disallows the cloning of objects.
+[![Build Status](https://travis-ci.org/FlorianWolters/PHP-Component-Core-Cloneable.svg?branch=master)](https://travis-ci.org/FlorianWolters/PHP-Component-Core-Cloneable)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/FlorianWolters/PHP-Component-Core-Cloneable/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/FlorianWolters/PHP-Component-Core-Cloneable/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/FlorianWolters/PHP-Component-Core-Cloneable/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/FlorianWolters/PHP-Component-Core-Cloneable/?branch=master)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/16878759-ea3e-4854-bc64-c43402fe09bc/mini.png)](https://insight.sensiolabs.com/projects/16878759-ea3e-4854-bc64-c43402fe09bc)
+[![Coverage Status](https://coveralls.io/repos/FlorianWolters/PHP-Component-Core-Cloneable/badge.png?branch=master)](https://coveralls.io/r/FlorianWolters/PHP-Component-Core-Cloneable?branch=master)
+
+[![Latest Stable Version](https://poser.pugx.org/florianwolters/component-core-cloneable/v/stable.png)](https://packagist.org/packages/florianwolters/component-core-cloneable)
+[![Total Downloads](https://poser.pugx.org/florianwolters/component-core-cloneable/downloads.png)](https://packagist.org/packages/florianwolters/component-core-cloneable)
+[![Monthly Downloads](https://poser.pugx.org/florianwolters/component-core-cloneable/d/monthly.png)](https://packagist.org/packages/florianwolters/component-core-cloneable)
+[![Daily Downloads](https://poser.pugx.org/florianwolters/component-core-cloneable/d/daily.png)](https://packagist.org/packages/florianwolters/component-core-cloneable)
+[![Latest Unstable Version](https://poser.pugx.org/florianwolters/component-core-cloneable/v/unstable.png)](https://packagist.org/packages/florianwolters/component-core-cloneable)
+[![License](https://poser.pugx.org/florianwolters/component-core-cloneable/license.png)](https://packagist.org/packages/florianwolters/component-core-cloneable)
+
+[![Stories in Ready](https://badge.waffle.io/florianwolters/php-component-core-cloneable.png?label=ready&title=Ready)](https://waffle.io/florianwolters/php-component-core-cloneable)
+[![Dependency Status](https://www.versioneye.com/user/projects/51c33102007fcd0002000439/badge.png)](https://www.versioneye.com/user/projects/51c33102007fcd0002000439)
+[![Dependencies Status](https://depending.in/FlorianWolters/PHP-Component-Core-Cloneable.png)](http://depending.in/FlorianWolters/PHP-Component-Core-Cloneable)
+[![HHVM Status](http://hhvm.h4cc.de/badge/florianwolters/component-core-cloneable.png)](http://hhvm.h4cc.de/package/florianwolters/component-core-cloneable)
+
+## Table of Contents (ToC)
+
+* [Introduction](#introduction)
+* [Features](#features)
+* [Requirements](#requirements)
+* [Usage](#usage)
+* [Installation](#installation)
+* [As A Dependency On Your Component](#as-a-dependency-on-your-component)
+* [Contributing](#contributing)
+* [Credits](#credits)
+* [License](#license)
 
 ## Introduction
 
-This component is inspired by the the [Java][24] programming language.
+This component is inspired by the the [Java][54] programming language.
 
 **FlorianWolters\Component\Core\Cloneable** consists of six artifacts:
 
-1. The interface [`FlorianWolters\Component\Core\CloneableInterface`][25]: Indicates to the magic [`__clone`][23] method of a class that it is legal for that method to make a field-for-field copy of instances of that class.
-2. The exception class [`FlorianWolters\Component\Core\CloneNotSupportedException`][26]: Indicates that the magic [`__clone`][23] method in a class has been called to clone an object, but that the object's class does not implement the [`CloneableInterface`][25].
-3. The trait [`FlorianWolters\Component\Core\CloneNotSupportedTrait`][27]: Indicates to the magic [`__clone`][23] method of a class that it is **illegal** for that method to make a field-for-field copy of instances of that class.
-3. The trait [`FlorianWolters\Component\Core\ShallowCloneTrait`][28]: Indicates to the magic [`__clone`][23] method of a class that it is **legal** for that method to make a **shallow** field-for-field copy of instances of that class.
-3. The trait [`FlorianWolters\Component\Core\DeepCloneTrait`][29]: Indicates to the magic [`__clone`][23] method of a class that it is **legal** for that method to make a **deep** field-for-field copy of instances of that class.
-6. The static class [`FlorianWolters\Component\Core\CloneUtils`][30]: Offers operations to clone objects.
+1. The interface [`FlorianWolters\Component\Core\CloneableInterface`][55]: Indicates to the magic [`__clone`][53] method of a class that it is legal for that method to make a field-for-field copy of instances of that class.
+2. The exception class [`FlorianWolters\Component\Core\CloneNotSupportedException`][56]: Indicates that the magic [`__clone`][23] method in a class has been called to clone an object, but that the object's class does not implement the [`CloneableInterface`][25].
+3. The trait [`FlorianWolters\Component\Core\CloneNotSupportedTrait`][57]: Indicates to the magic [`__clone`][53] method of a class that it is **illegal** for that method to make a field-for-field copy of instances of that class.
+3. The trait [`FlorianWolters\Component\Core\ShallowCloneTrait`][58]: Indicates to the magic [`__clone`][53] method of a class that it is **legal** for that method to make a **shallow** field-for-field copy of instances of that class.
+3. The trait [`FlorianWolters\Component\Core\DeepCloneTrait`][59]: Indicates to the magic [`__clone`][53] method of a class that it is **legal** for that method to make a **deep** field-for-field copy of instances of that class.
+6. The static class [`FlorianWolters\Component\Core\CloneUtils`][60]: Offers operations to clone objects.
 
 ## Features
 
-* Disallows cloning via the magic method [`__clone`][23] by using the trait [`CloneNotSupportedTrait`][27]. When trying to copy an object via the `clone` keyword, a `CloneNotSupportedException` is thrown.
-* Allows (type safe) cloning via the magic method [`__clone`][23] by implementing the interface [`CloneableInterface`][25] and using one of the two traits [`ShallowCloneTrait`][28] to make a **shallow** or [`ShallowCloneTrait`][29] to make a **deep** copy of an instance of the class.
-* Allows creating **deep** copies of any object via the method `copyDeep` of the class [`CloneUtils`][30].
+* Disallows cloning via the magic method [`__clone`][53] by using the trait [`CloneNotSupportedTrait`][57]. When trying to copy an object via the `clone` keyword, a [`CloneNotSupportedException`][56] is thrown.
+* Allows (type safe) cloning via the magic method [`__clone`][53] by implementing the interface [`CloneableInterface`][55] and using one of the two traits [`ShallowCloneTrait`][58] to make a **shallow** or [`DeepCloneTrait`][59] to make a **deep** copy of an instance of the class.
+* Allows creating **deep** copies of any object via the method `copyDeep` of the class [`CloneUtils`][60].
 * Artifacts tested with both static and dynamic test procedures:
-    * Dynamic component tests (unit tests) implemented using [PHPUnit][19].
+    * Dynamic component tests (unit and integration tests) implemented with [PHPUnit][41].
     * Static code analysis performed using the following tools:
-        * [PHP_CodeSniffer][14]: Style Checker
-        * [PHP Mess Detector (PHPMD)][18]: Code Analyzer
-        * [phpcpd][4]: Copy/Paste Detector (CPD)
-        * [phpdcd][5]: Dead Code Detector (DCD)
-* Installable via [Composer][3] or the [PEAR command line installer][11]:
-    * Provides a [Packagist][22] package which can be installed using the dependency manager [Composer][3].
+        * [PHP_CodeSniffer][40]: Style Checker
+        * [PHP Mess Detector (PHPMD)][44]: Code Analyzer
+        * [PHP Depend][45]: Code Metrics
+        * [phpcpd][42]: Copy/Paste Detector (CPD)
+        * [phpdcd][43]: Dead Code Detector (DCD)
+        * [SensioLabs Security Checker][47]: Security Checker
+    * Continuous Integration (CI) using the following web services:
+        * [Scrutinizer CI][21]
+        * [SensioLabsInsight][22]
+        * [Coveralls][23]
+        * [VersionEye][24]
+        * [Depending][25]
+        * [Waffle][26]
+* Provides a [Packagist][3] package which can be installed using the dependency manager [Composer][2]. Click [here][51] for the package on [Packagist][3].
+* Provides a complete Application Programming Interface (API) documentation generated with the documentation generator [phpDocumentor][46]. Click [here][52] for the API documentation.
+* Follows the following "standards" from the [PHP Framework Interoperability Group (FIG)][10]. PSR stands for PHP Standards Recommendation:
+    * [PSR-0][11]: Autoloading Standards
 
-      Click [here][21] for the package on [Packagist][22].
-    * Provides a [PEAR package][13] which can be installed using the package manager [PEAR installer][11].
+        > Aims to provide a standard file, class and namespace convention to allow plug-and-play code.
+    * [PSR-1][12]: Basic Coding Standard
 
-      Click [here][9] for the [PEAR channel][12].
-* Provides a complete Application Programming Interface (API) documentation generated with the documentation generator [ApiGen][2].
+        > Aims to ensure a high level of technical interoperability between shared PHP code.
+    * [PSR-2][13]: Coding Style Guide
 
-  Click [here][1] for the current API documentation.
-* Follows the [PSR-0][6] requirements for autoloader interoperability.
-* Follows the [PSR-1][7] basic coding style guide.
-* Follows the [PSR-2][8] coding style guide.
-* Follows the [Semantic Versioning][20] Specification (SemVer) 2.0.0-rc.1.
+        > Provides a Coding Style Guide for projects looking to standardize their code.
+    * [PSR-4][14]: Autoloader
+
+        > A more modern take on autoloading reflecting advances in the ecosystem.
+* Follows the [Semantic Versioning][4] (SemVer) specification version 2.0.0.
 
 ## Requirements
 
-* [PHP][17] >= 5.4
+### Production
+
+* [PHP][1] >= 5.4
+* [Composer][2]
+
+### Development
+
+* [PHPUnit][41]
+* [phpcpd][42]
+* [phpdcd][43]
+* [PHP_CodeSniffer][40]
+* [PHP Mess Detector (PHPMD)][44]
+* [PDepend][45]
+* [phpDocumentor][46]
+* [SensioLabs Security Checker][47]
+* [php-coveralls][48]
 
 ## Usage
 
-The best documentation for **FlorianWolters\Component\Core\Cloneable** are the unit tests, which are shipped in the package. You will find them installed into your [PEAR][10] repository, which on Linux systems is normally `/usr/share/php/test`.
+The best documentation for **FlorianWolters\Component\Core\Cloneable** are the unit tests, which are shipped in the package.
 
 ## Installation
 
-### Local Installation
+**FlorianWolters\Component\Core\Cloneable** should be installed using the dependency manager [Composer][2].
 
-**FlorianWolters\Component\Core\Cloneable** should be installed using the dependency manager [Composer][3]. [Composer][3] can be installed with [PHP][6].
+> [Composer][2] is a tool for dependency management in [PHP][1]. It allows you to declare the dependent libraries your project needs and it will install them in your project for you.
 
-    php -r "eval('?>'.file_get_contents('http://getcomposer.org/installer'));"
+The [Composer][2] installer can be downloaded with `php`.
 
-> This will just check a few [PHP][17] settings and then download `composer.phar` to your working directory. This file is the [Composer][3] binary. It is a PHAR ([PHP][17] archive), which is an archive format for [PHP][17] which can be run on the command line, amongst other things.
->
-> Next, run the `install` command to resolve and download dependencies:
+    php -r "readfile('https://getcomposer.org/installer');" | php
+
+> This will just check a few [PHP][1] settings and then download `composer.phar` to your working directory. This file is the [Composer][2] binary. It is a PHAR ([PHP][1] archive), which is an archive format for [PHP][1] which can be run on the command line, amongst other things.
+
+> To resolve and download dependencies, run the `install` command:
 
     php composer.phar install
 
-### System-Wide Installation
-
-**FlorianWolters\Component\Core\Cloneable** should be installed using the [PEAR installer][11]. This installer is the [PHP][17] community's de-facto standard for installing [PHP][17] components.
-
-    pear channel-discover pear.florianwolters.de
-    pear install --alldeps fw/Cloneable
-
 ## As A Dependency On Your Component
-
-### Composer
 
 If you are creating a component that relies on **FlorianWolters\Component\Core\Cloneable**, please make sure that you add **FlorianWolters\Component\Core\Cloneable** to your component's `composer.json` file:
 
 ```json
 {
     "require": {
-        "florianwolters/component-core-cloneable": "0.2.*"
+        "florianwolters/component-core-cloneable": "0.3.*"
     }
 }
 ```
 
-### PEAR
+## Contributing
 
-If you are creating a component that relies on **FlorianWolters\Component\Core\Cloneable**, please make sure that you add **FlorianWolters\Component\Core\Cloneable** to your component's `package.xml` file:
+See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
-```xml
-<dependencies>
-  <required>
-    <package>
-      <name>Cloneable</name>
-      <channel>pear.florianwolters.de</channel>
-      <min>0.2.0</min>
-      <max>0.2.99</max>
-    </package>
-  </required>
-</dependencies>
-```
+## Credits
 
-## Development Environment
-
-If you want to patch or enhance this component, you will need to create a suitable development environment. The easiest way to do that is to install [phix4componentdev][16]:
-
-    # phix4componentdev
-    pear channel-discover pear.phix-project.org
-    pear install phix/phix4componentdev
-
-You can then clone the Git repository:
-
-    # PHP-Component-Core-Cloneable
-    git clone http://github.com/FlorianWolters/PHP-Component-Core-Cloneable
-
-Then, install a local copy of this component's dependencies to complete the development environment:
-
-    # build vendor/ folder
-    phing build-vendor
-
-To make life easier for you, common tasks (such as running unit tests, generating code review analytics, and creating the [PEAR package][13]) have been automated using [phing][15]. You'll find the automated steps inside the `build.xml` file that ships with the component.
-
-Run the command `phing` in the component's top-level folder to see the full list of available automated tasks.
+* [Florian Wolters][9]
+* [All Contributors][50]
 
 ## License
 
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+This program is free software: you can redistribute it and/or modify it under the
+terms of the GNU Lesser General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version.
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details.
 
-You should have received a copy of the GNU Lesser General Public License along with this program. If not, see <http://gnu.org/licenses/lgpl.txt>.
+You should have received a copy of the GNU Lesser General Public License along
+with this program. If not, see <http://gnu.org/licenses/lgpl.txt>.
 
-[1]: http://blog.florianwolters.de/PHP-Component-Core-Cloneable
-     "FlorianWolters\Component\Core\Cloneable | Application Programming Interface (API) documentation"
-[2]: http://apigen.org
-     "ApiGen | API documentation generator for PHP 5.3.+"
-[3]: http://getcomposer.org
+[1]: https://php.net
+     "PHP: Hypertext Preprocessor"
+[2]: https://getcomposer.org
      "Composer"
-[4]: https://github.com/sebastianbergmann/phpcpd
-     "sebastianbergmann/phpcpd · GitHub"
-[5]: https://github.com/sebastianbergmann/phpdcd
-     "sebastianbergmann/phpdcd · GitHub"
-[6]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
-     "PSR-0 requirements for autoloader interoperability"
-[7]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
-     "PSR-1 basic coding style guide"
-[8]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
-     "PSR-2 coding style guide"
-[9]: http://pear.florianwolters.de
-     "PEAR channel of Florian Wolters"
-[10]: http://pear.php.net
-      "PEAR - PHP Extension and Application Repository"
-[11]: http://pear.php.net/manual/en/guide.users.commandline.cli.php
-      "Manual :: Command line installer (PEAR)"
-[12]: http://pear.php.net/manual/en/guide.users.concepts.channel.php
-      "Manual :: PEAR Channels"
-[13]: http://pear.php.net/manual/en/guide.users.concepts.package.php
-      "Manual :: PEAR Packages"
-[14]: http://pear.php.net/package/PHP_CodeSniffer
+[3]: https://packagist.org
+     "Packagist"
+[4]: http://semver.org
+     "Semantic Versioning"
+[9]: https://github.com/FlorianWolters
+     "FlorianWolters · GitHub"
+[10]: http://php-fig.org
+      "PHP-FIG — PHP Framework Interop Group"
+[11]: http://php-fig.org/psr/psr-0
+      "PSR-0 requirements for autoloader interoperability"
+[12]: http://php-fig.org/psr/psr-1
+      "PSR-1 basic coding style guide"
+[13]: http://php-fig.org/psr/psr-2
+      "PSR-2 coding style guide"
+[14]: http://php-fig.org/psr/psr-4
+      "PSR-4: Improved Autoloading"
+[20]: https://travis-ci.org
+      "Travis CI"
+[21]: https://scrutinizer-ci.com
+      "Scrutinizer CI"
+[22]: https://insight.sensiolabs.com
+      "SensioLabsInsight"
+[23]: https://coveralls.io
+      "Coveralls"
+[24]: https://versioneye.com
+      "VersionEye"
+[25]: https://depending.in
+      "Depending"
+[26]: https://waffle.io
+      "Waffle"
+[27]: http://hhvm.h4cc.de
+      "HHVM Support in PHP Projects"
+[40]: https://pear.php.net/package/PHP_CodeSniffer
       "PHP_CodeSniffer"
-[15]: http://phing.info
-      "Phing"
-[16]: https://github.com/stuartherbert/phix4componentdev
-      "stuartherbert/phix4componentdev · GitHub"
-[17]: http://php.net
-      "PHP: Hypertext Preprocessor"
-[18]: http://phpmd.org
+[41]: https://phpunit.de
+      "PHPUnit"
+[42]: https://github.com/sebastianbergmann/phpcpd
+      "sebastianbergmann/phpcpd · GitHub"
+[43]: https://github.com/sebastianbergmann/phpdcd
+      "sebastianbergmann/phpdcd · GitHub"
+[44]: http://phpmd.org
       "PHPMD - PHP Mess Detector"
-[19]: http://phpunit.de
-      "sebastianbergmann/phpunit · GitHub"
-[20]: http://semver.org
-      "Semantic Versioning"
-[21]: http://packagist.org/packages/florianwolters/component-core-cloneable
+[45]: http://pdepend.org
+      "PHP Depend - Software Metrics for PHP"
+[46]: http://phpdoc.org
+      "phpDocumentor"
+[47]: https://github.com/sensiolabs/security-checker
+      "SensioLabs Security Checker"
+[48]: https://github.com/satooshi/php-coveralls
+      "satooshi/php-coveralls · GitHub"
+[50]: https://github.com/FlorianWolters/PHP-Component-Core-Cloneable/contributors
+      "Contributors to FlorianWolters/PHP-Component-Core-Cloneable"
+[51]: https://packagist.org/packages/florianwolters/component-core-cloneable
       "florianwolters/component-core-cloneable - Packagist"
-[22]: http://packagist.org
-      "Packagist"
-[23]: http://php.net/language.oop5.cloning
+[52]: http://blog.florianwolters.de/PHP-Component-Core-Cloneable
+      "Application Programming Interface (API) documentation"
+[53]: https://php.net/language.oop5.cloning
       "PHP: Object Cloning"
-[24]: http://java.com
-      "java.com: Java + You"
-[25]: src/php/FlorianWolters/Component/Core/CloneableInterface.php
+[54]: https://java.com
+      "Java"
+[55]: src/main/php/CloneableInterface.php
       "FlorianWolters\Component\Core\CloneableInterface"
-[26]: src/php/FlorianWolters/Component/Core/CloneNotSupportedException.php
+[56]: src/main/php/CloneNotSupportedException.php
       "FlorianWolters\Component\Core\CloneNotSupportedException"
-[27]: src/php/FlorianWolters/Component/Core/CloneNotSupportedTrait.php
+[57]: src/main/php/CloneNotSupportedTrait.php
       "FlorianWolters\Component\Core\CloneNotSupportedTrait"
-[28]: src/php/FlorianWolters/Component/Core/ShallowCloneTrait.php
+[58]: src/main/php/ShallowCloneTrait.php
       "FlorianWolters\Component\Core\ShallowCloneTrait"
-[29]: src/php/FlorianWolters/Component/Core/DeepCloneTrait.php
+[59]: src/main/php/DeepCloneTrait.php
       "FlorianWolters\Component\Core\DeepCloneTrait"
-[30]: src/php/FlorianWolters/Component/Core/CloneUtils.php
+[60]: src/main/php/CloneUtils.php
       "FlorianWolters\Component\Core\CloneUtils"
