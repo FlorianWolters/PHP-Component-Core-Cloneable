@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="FlorianWolters\Component\Core" version="2.5.0&#10;">
+  <partials/>
+  <file path="ShallowCloneTrait.php" generated-path="ShallowCloneTrait.html" hash="a9ac74405118a8b84ecbf83e5c52ff27" package="global">
+    <docblock line="0">
+      <description>FlorianWolters\Component\Core\ShallowCloneTrait</description>
+      <long-description>PHP Version 5.4</long-description>
+      <tag name="author" line="0" description="Florian Wolters" link="mailto:wolters.fl@gmail.com"/>
+      <tag name="copyright" line="0" description="2011-2014 Florian Wolters (http://blog.florianwolters.de)"/>
+      <tag name="license" line="0" description="LGPL-3.0+" link="http://gnu.org/licenses/lgpl.txt"/>
+      <tag name="link" line="0" description="http://github.com/FlorianWolters/PHP-Component-Core-Cloneable" link="http://github.com/FlorianWolters/PHP-Component-Core-Cloneable"/>
+    </docblock>
+    <trait namespace="FlorianWolters\Component\Core" line="22" package="global">
+      <name>ShallowCloneTrait</name>
+      <full_name>\FlorianWolters\Component\Core\ShallowCloneTrait</full_name>
+      <docblock line="22">
+        <description>A class uses the {@see ShallowCloneTrait} to indicate to the magic `__clone`
+method of a class that it is **legal** for that method to make a **shallow*
+field-for-field copy of instances of that class.</description>
+        <long-description></long-description>
+        <tag name="since" line="22" description="Trait available since Release 0.2.0"/>
+      </docblock>
+      <method final="true" abstract="false" static="false" visibility="public" namespace="FlorianWolters\Component\Core" line="34" package="global">
+        <name>__clone</name>
+        <full_name>\FlorianWolters\Component\Core\ShallowCloneTrait::__clone()</full_name>
+        <docblock line="34">
+          <description>Creates a copy of this object.</description>
+          <long-description>"copy" means performing a **shallow** copy of all of the properties of
+this object.</long-description>
+          <tag name="return" line="34" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="throws" line="34" description="If the object using this trait does&#13;&#10;   not implement {@see CloneableInterface}." type="\FlorianWolters\Component\Core\CloneNotSupportedException">
+            <type>\FlorianWolters\Component\Core\CloneNotSupportedException</type>
+          </tag>
+        </docblock>
+      </method>
+    </trait>
+    <source>eJx9U21r2zAQ/u5fcZR9SDxsp133JS1bRthLoZSw7uVLoVXss61VloR0bjpK/vtOsh0oZRUhlqXnnnvuufP5R9vapEjTBFL4ooyTQv82itD5m7XprNGoiXcOb65boZTZrRWf/XBCEoeEqM23DfxivDQa3uen4+lK9NQaB7xGWhh54Xw3bPJarZpOSJWXpvsQg0pj/zrZtAQni+PjjP9OX4TPWiK7LIqtMg1TxMuJscJ55FGyRO2Rk4/gRve5cU0xXvhCNVbl9Ehw+XVzmb3LF2/HQH0PcU2Bktp+GxQWz+0puO7sYFEWLMqiN2KrkLmKJNGiQ29Fia87e5ZMDfgEpRLeQ88KgVqEp5VHhBfO74EMSF3JUhCGfcB2opEl3N3elgF3F/g65B5UYGoQIzO1gkDyz0OaKmyESlOouU/xYsQzYSfukYPS1A+5o7xaoqoyRmdxB6FbgVxqT0KXrJlfIlFMlk+j4CVfQlQO4oEbHiyC4fQ7KhTcqUV+ki+ibRRxL6ftKQltiU6FlcLaIZfvQ22jEGq5LrP9gyXlI2oCHwXMEVcotAeLjqvopG6e1ZgeiPh94EOwzjCcZKxuYnsl0coh9U7Dg5HV4YxaZ3YeYjVXhq57a40jrD4/lmgpfDkXQ7aBkwcgaItZBjsqg35i46UNt7CzCjseonFKDsN3oXnIah67/aStiM9aaqHA9lv+CKDudRkTj/Mym0fMYHJYke4nSeWXyyj//+Ivaj4+pJ+9CbrnZ5Fpn+yTf67rbH8=</source>
+  </file>
+  <file path="CloneNotSupportedTrait.php" generated-path="CloneNotSupportedTrait.html" hash="d4282e2ac01adaf3d798adff3ae93161" package="global">
+    <docblock line="0">
+      <description>FlorianWolters\Component\Core\CloneNotSupportedTrait</description>
+      <long-description>PHP Version 5.4</long-description>
+      <tag name="author" line="0" description="Florian Wolters" link="mailto:wolters.fl@gmail.com"/>
+      <tag name="copyright" line="0" description="2011-2014 Florian Wolters (http://blog.florianwolters.de)"/>
+      <tag name="license" line="0" description="LGPL-3.0+" link="http://gnu.org/licenses/lgpl.txt"/>
+      <tag name="link" line="0" description="http://github.com/FlorianWolters/PHP-Component-Core-Cloneable" link="http://github.com/FlorianWolters/PHP-Component-Core-Cloneable"/>
+    </docblock>
+    <trait namespace="FlorianWolters\Component\Core" line="27" package="global">
+      <name>CloneNotSupportedTrait</name>
+      <full_name>\FlorianWolters\Component\Core\CloneNotSupportedTrait</full_name>
+      <docblock line="27">
+        <description>A class uses the {@see CloneNotSupportedTrait} to indicate to the magic
+`__clone` method of a class that it is **illegal** for that method to make a
+field-for-field copy of instances of that class.</description>
+        <long-description>Invoking the magic `__clone` method on an instance that uses the {@see
+CloneNotSupportedTrait} results in the exception {@see
+CloneNotSupportedException} being thrown.</long-description>
+        <tag name="see" line="27" description="" link="\FlorianWolters\Component\Core\CloneNotSupportedException"/>
+        <tag name="since" line="27" description="Trait available since Release 0.1.0"/>
+      </docblock>
+      <method final="true" abstract="false" static="false" visibility="public" namespace="FlorianWolters\Component\Core" line="35" package="global">
+        <name>__clone</name>
+        <full_name>\FlorianWolters\Component\Core\CloneNotSupportedTrait::__clone()</full_name>
+        <docblock line="35">
+          <description>Throws a {@see CloneNotSupportedException}.</description>
+          <long-description></long-description>
+          <tag name="return" line="35" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="throws" line="35" description="Always." type="\FlorianWolters\Component\Core\CloneNotSupportedException">
+            <type>\FlorianWolters\Component\Core\CloneNotSupportedException</type>
+          </tag>
+        </docblock>
+      </method>
+    </trait>
+    <source>eJx9U11P3DAQfM+v2EdIleSupS8FtYdQvyRUnVpUXpDA52wS6xw7sjd3IHT/nbWTgBDcWVHi2DPjyc7m7FvXdEmRpgmk8ENbp4S5tprQ+ZsL23bWoCGeOby50Pzyx9K/vuusIyyvnFDEvEBd/lrCfyYpa+BzfjKuLkRPjXXAY9SGURzOtsMkr/SiboXSubTt10iStntwqm4IPs7m84xvJ2/oRw1R96UoVtrWLBE3J8USj6OOVhKNRz58BNemz62ri3HDF7rudE73BJc/l5fZp3z2YSSaNcQxERU1/So4LF7XqODvzp7rlIU6ZbFOYqWRtYokMaJF3wmJh8t7mkwpnIPUwnvo2SFQg/C48Ijwfvl3QBaUKZUUhGEeCK2olQxSd7e3MtDuoEUOogRbgRjlqREEii8Paaq0xlroNIWK44pbI4MlW7FGEEGvUqjLjCFZnEFIKmgq40kYyX75JbLjGfnYBr/Nxq6VqV/MvePMAMc7CQ0irysQlPYVwaHvNXnmRzzeS+wo9OJ+5vcJs4MVDuac3ZrJc6w5HKANIBXMRhMgNtzFIXcYVv+iRsHtN8vn+Sz2AkXcnv/oMQkNF3sgjBSugh/Pee3J/+UD8pEyMRcOqXcGNlaVz2s0yO2XgXO9FQ9+Eivis1JGaOj6Ff8zUPVGRuQY3tFxxAzOw4hngMHtgWNOI3qX7JInTsJ+Fw==</source>
+  </file>
+  <file path="CloneNotSupportedException.php" generated-path="CloneNotSupportedException.html" hash="0f32ff9d46e9bd03fc18b4a261576fb5" package="global">
+    <docblock line="0">
+      <description>FlorianWolters\Component\Core\CloneNotSupportedException</description>
+      <long-description>PHP Version 5.4</long-description>
+      <tag name="author" line="0" description="Florian Wolters" link="mailto:wolters.fl@gmail.com"/>
+      <tag name="copyright" line="0" description="2011-2014 Florian Wolters (http://blog.florianwolters.de)"/>
+      <tag name="license" line="0" description="LGPL-3.0+" link="http://gnu.org/licenses/lgpl.txt"/>
+      <tag name="link" line="0" description="http://github.com/FlorianWolters/PHP-Component-Core-Cloneable" link="http://github.com/FlorianWolters/PHP-Component-Core-Cloneable"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="FlorianWolters\Component\Core" line="28" package="global">
+      <extends>\Exception</extends>
+      <name>CloneNotSupportedException</name>
+      <full_name>\FlorianWolters\Component\Core\CloneNotSupportedException</full_name>
+      <docblock line="28">
+        <description>Thrown to indicate that the magic `__clone` method in a class has been called
+to clone an object, but that the object's class does not implement the {@see
+CloneableInterface}.</description>
+        <long-description>Applications that override the `__clone` method can also throw this exception
+to indicate that an object could not or should not be cloned.</long-description>
+        <tag name="see" line="28" description="CloneNotSupportedTrait" link="\FlorianWolters\Component\Core\CloneableInterface,"/>
+        <tag name="since" line="28" description="Class available since Release 0.1.0"/>
+      </docblock>
+    </class>
+    <source>eJx9U11v1DAQfM+v2Dfg6CV3UF6ggkMnvqQKnaCiLye1jrNNDI7XsjdtUdX/zsbJpVQR5MFK1p7xzOzm5J1vfFYsFhks4KOlYJQ7J8sY4n5LrSeHjuUt4H5r5eMr8ffOewqM1YdbjZ4NOcH28N3nHfwQoFTgVX48Vjeq44YCyDPyw3gBnNwML/mV3dStMjbX1L5NIE3+dzB1w/BitV4vZTmewZ82zP51UZSWaqFImwfGCp8lHms0uohy+Xi4dl1OoS7GjVjY2tucbxlOP+1Oly/z1fMR6H5Beg5Aw01X9gqLxzkV4ns5ZbXss1qmrFRpUbiKLHOqxeiVxv9H/CbLOtG6n4KVwtiasybQjQMmMK4yWjECN4plQWhVbTRcXlzo/tZLaFECr+QgKNBWxQiNilAiOtDKWqx6QmFKx0ECpfInaj6CsuMH1qH4JI4UFWEERwym9RZbkZxO3W0i9iZhcvzFibMr8XqfjxPw3nvbSxZDceCnawzBVJgoZsK1SFI2kuyKaVlNBPxr1uYpTB5AU2erpFNGLjbTV4mD3eogqtctzZ3LPoLZoJ8FZXgAGSdN3KZE1LVMbA+FofoNLSpp3ypf56vU9yG5f/834orRVREe/qS77D77A5VhN5A=</source>
+  </file>
+  <file path="CloneableInterface.php" generated-path="CloneableInterface.html" hash="ac4884dcb55689e122bcdea2a3eaefad" package="global">
+    <docblock line="0">
+      <description>FlorianWolters\Component\Core\CloneableInterface</description>
+      <long-description>PHP Version 5.4</long-description>
+      <tag name="author" line="0" description="Florian Wolters" link="mailto:wolters.fl@gmail.com"/>
+      <tag name="copyright" line="0" description="2011-2014 Florian Wolters (http://blog.florianwolters.de)"/>
+      <tag name="license" line="0" description="LGPL-3.0+" link="http://gnu.org/licenses/lgpl.txt"/>
+      <tag name="link" line="0" description="http://github.com/FlorianWolters/PHP-Component-Core-Cloneable" link="http://github.com/FlorianWolters/PHP-Component-Core-Cloneable"/>
+    </docblock>
+    <interface namespace="FlorianWolters\Component\Core" line="34" package="global">
+      <name>CloneableInterface</name>
+      <full_name>\FlorianWolters\Component\Core\CloneableInterface</full_name>
+      <docblock line="34">
+        <description>A class implements the {@see CloneableInterface} to indicate to the magic
+`__clone` method of a class that it is legal for that method to make a
+field-for-field copy of instances of that class.</description>
+        <long-description>By convention, classes that implement this interface should use either the
+{@see ShallowCloneTrait} or the {@see DeepCloneTrait}.
+
+Invoking the magic `__clone` method on an instance that does not implement
+the {@see CloneableInterface} results in the exception {@see
+CloneNotSupportedException} being thrown when using the {@see
+ShallowCloneTrait} or the {@see DeepCloneTrait}.
+
+Note that this interface does not contain the magic `__clone` method.
+Therefore, it is not possible to clone an object merely by virtue of the fact
+that it implements this interface.</long-description>
+        <tag name="since" line="34" description="Interface available since Release 0.1.0"/>
+      </docblock>
+    </interface>
+    <source>eJydVN9v0zAQfs9fcY9QlqSF8QITFMavSROq2AQvkzYnuSZmjm3ZTrtq6v/O2bG7wqo9EFWVk7vvu+++u+Tkve50Vk4mGUzgi1CGM/lLCYfGXp2qXiuJ0tHJ4NWpoBtWCTyTFF6yGgnjYYtvC/hJAK4kvC6O49M5G1ynDNAVeSESw8l6PBRLMW97xkVRq/5dANVKbwxvOwcvp7NZTn/Hj+DPOuf0m7KshGqJIgQTY4PPA4/gNUqLVDwmt3IolGnLGLClaLUo3J2D86+L8/xVMX0RgfIWwpWA3HVD5RWWf/tTUt/5zqPce5TvPCKuMssk69Fqcuppa99maQIfoBbMWuC9FthT3ILrEO7nFhEeD2ALTgGXDa+ZQ3/2yT1ree3Jbq6vaw+5gR5pFA2oJbBYwHXMAaefBYEtE7CkUYWHMZfIenaLwDzTkqNockrJwwn8lDwbl9YxWaP1NwEd2Iu4Ah83lClX1AatxtEYw1Q7dUi3JIKnlsB2aqASAw0PyXr0sryd0YSLjgmh1sGLS8O420JQnkz6hKj3gknKmVypWy7bB4cO2COBtiz1NMpsFAmWak+vZ3t6JgbtIJzvKSTiXY3aOzBCPD6gvit3MWitjMPmc8rZQoWjTKPWEtYdSrIiCd8R/KcLVDL29Y/puzZpXo5F4Ydt8lxwSXNB2gc8ikvksVpZy8kKvzsB4u1U1W+s/VYZFBuoNrDixg04LgwCVY+Oxn3cX/x9iamFOZlBgnd2A1vRB8RPAMbIDxTIaHmmxayYhtfwoc0Dn7D7bJv9ATkhuTM=</source>
+  </file>
+  <file path="CloneUtils.php" generated-path="CloneUtils.html" hash="c536d606e07f3d3838e4157cb46f326e" package="global">
+    <docblock line="0">
+      <description>FlorianWolters\Component\Core\CloneUtils</description>
+      <long-description>PHP Version 5.4</long-description>
+      <tag name="author" line="0" description="Florian Wolters" link="mailto:wolters.fl@gmail.com"/>
+      <tag name="copyright" line="0" description="2011-2014 Florian Wolters (http://blog.florianwolters.de)"/>
+      <tag name="license" line="0" description="LGPL-3.0+" link="http://gnu.org/licenses/lgpl.txt"/>
+      <tag name="link" line="0" description="http://github.com/FlorianWolters/PHP-Component-Core-Cloneable" link="http://github.com/FlorianWolters/PHP-Component-Core-Cloneable"/>
+    </docblock>
+    <class final="true" abstract="false" namespace="FlorianWolters\Component\Core" line="23" package="global">
+      <extends/>
+      <name>CloneUtils</name>
+      <full_name>\FlorianWolters\Component\Core\CloneUtils</full_name>
+      <docblock line="23">
+        <description>The static class {@see CloneUtils} offers operations to clone objects.</description>
+        <long-description></long-description>
+        <tag name="see" line="23" description="CloneNotSupportedException" link="\FlorianWolters\Component\Core\CloneableInterface,"/>
+        <tag name="since" line="23" description="Class available since Release 0.2.0"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="FlorianWolters\Component\Core" line="36" package="global">
+        <name>__construct</name>
+        <full_name>\FlorianWolters\Component\Core\CloneUtils::__construct()</full_name>
+        <docblock line="36">
+          <description>{@see CloneUtils} instances can **NOT** be constructed in standard
+programming.</description>
+          <long-description>Instead, the class should be used as:
+/---code php
+$clone = CloneUtils::copyDeep($original);
+\---</long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="FlorianWolters\Component\Core" line="53" package="global">
+        <name>copyDeep</name>
+        <full_name>\FlorianWolters\Component\Core\CloneUtils::copyDeep()</full_name>
+        <docblock line="53">
+          <description>Creates and returns a deep copy of the specified object.</description>
+          <long-description>The deep copy is **recursive**, so it cannot be used if the specified
+object has one or more circular or parental references.</long-description>
+          <tag name="param" line="53" description="&lt;p&gt;The object to copy.&lt;/p&gt;" type="object" variable="$source">
+            <type>object</type>
+          </tag>
+          <tag name="return" line="53" description="The deep copy of the object." type="object">
+            <type>object</type>
+          </tag>
+          <tag name="throws" line="53" description="If `$source` is not an object." type="\InvalidArgumentException">
+            <type>\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$source</name>
+          <default></default>
+          <type>object</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="FlorianWolters\Component\Core" line="71" package="global">
+        <name>copy</name>
+        <full_name>\FlorianWolters\Component\Core\CloneUtils::copy()</full_name>
+        <docblock line="71">
+          <description>Creates and returns a copy of the specified object.</description>
+          <long-description>The precise meaning of "copy" may depend on the class of the object.</long-description>
+          <tag name="param" line="71" description="&lt;p&gt;The object to copy.&lt;/p&gt;" type="\FlorianWolters\Component\Core\CloneableInterface" variable="$source">
+            <type>\FlorianWolters\Component\Core\CloneableInterface</type>
+          </tag>
+          <tag name="return" line="71" description="The copy of the object." type="\FlorianWolters\Component\Core\CloneableInterface">
+            <type>\FlorianWolters\Component\Core\CloneableInterface</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$source</name>
+          <default></default>
+          <type>\FlorianWolters\Component\Core\CloneableInterface</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="FlorianWolters\Component\Core" line="86" package="global">
+        <name>throwCloneNotSupportedExceptionIfNotCloneable</name>
+        <full_name>\FlorianWolters\Component\Core\CloneUtils::throwCloneNotSupportedExceptionIfNotCloneable()</full_name>
+        <docblock line="86">
+          <description>Throws a {@see CloneNotSupportedException} if the specified object does
+not implement {@see CloneableInterface}.</description>
+          <long-description></long-description>
+          <tag name="param" line="86" description="&lt;p&gt;The object to check.&lt;/p&gt;" type="\FlorianWolters\Component\Core\CloneableInterface" variable="$obj">
+            <type>\FlorianWolters\Component\Core\CloneableInterface</type>
+          </tag>
+          <tag name="return" line="86" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="throws" line="86" description="If the object `$obj` does not&#13;&#10;   implement {@see CloneableInterface}." type="\FlorianWolters\Component\Core\CloneNotSupportedException">
+            <type>\FlorianWolters\Component\Core\CloneNotSupportedException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$obj</name>
+          <default></default>
+          <type>\FlorianWolters\Component\Core\CloneableInterface</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="private" namespace="FlorianWolters\Component\Core" line="102" package="global">
+        <name>isInstanceOfCloneableInterface</name>
+        <full_name>\FlorianWolters\Component\Core\CloneUtils::isInstanceOfCloneableInterface()</full_name>
+        <docblock line="102">
+          <description>Checks whether the specified object is an instance of {@see
+CloneableInterface}.</description>
+          <long-description></long-description>
+          <tag name="param" line="102" description="&lt;p&gt;The object to check.&lt;/p&gt;" type="\FlorianWolters\Component\Core\CloneableInterface" variable="$obj">
+            <type>\FlorianWolters\Component\Core\CloneableInterface</type>
+          </tag>
+          <tag name="return" line="102" description="`true` if the object `$obj` is an instance of {@see&#13;&#10;   CloneableInterface}; `false` otherwise." type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$obj</name>
+          <default></default>
+          <type>\FlorianWolters\Component\Core\CloneableInterface</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="private" namespace="FlorianWolters\Component\Core" line="113" package="global">
+        <name>throwCloneNotSupportedException</name>
+        <full_name>\FlorianWolters\Component\Core\CloneUtils::throwCloneNotSupportedException()</full_name>
+        <docblock line="113">
+          <description>Throws a {@see CloneNotSupportedException}.</description>
+          <long-description></long-description>
+          <tag name="return" line="113" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="throws" line="113" description="Always." type="\FlorianWolters\Component\Core\CloneNotSupportedException">
+            <type>\FlorianWolters\Component\Core\CloneNotSupportedException</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJy9Vttu20YQfddXDAIDklWLdNL0RY5bGa7bCkgco3bbFwHSilyS2yx3id2lFDfQv2eGN0nUzSmK8iGhlzOHZ86cGerdT1mSdfx+vwN9+EVqI5j6S0vHjZ3c6jTTiiuHd4ZPbiX+8YcT0mIshT/89gB/YqDQCn7w3lanI5a7RBvAq8KDChDeLcsbL5KjOGVCeoFOfyySAp09GxEnDt5cvn49wH/e7qT3Eueyoe/PpY4RonhYI4b8vMCRIuDKcnx5FRyr3NMm9qsH1pdxJj332cH7Xx/eD773Lr+rEtUnKK46UbgknxNDf1sXH+seNNoMSJtBoQ2bS45YfqejWMptxgJ+XNKrTidHrpOxWjApwhsT5yk+u/sc8Myhqvi86sxTwsE65kQAgWTWwpeR5RzWLVmBjiISSWfcMEq24DQGYwDo+d88cNarO0SpAA3nsUJuEbK9KM/utXvMs0wbx8OGS5koVEBvJQZsgQ2kdChPf+eSM6zm0nvjXRYyREIxWfHdMM+XDqns+9T0kN/qBRKO+ThWqMijY8Z1ygCqnK7+nmKFQjXwrRYCNEi/f//xqd+HOYcAC3cmD5A6BpFmKmQmrJEyo2PD0lSo2KvO6kdjTOQsvACHWpekbaJzGRIstikEZod1sD8YDIg90PRUZ2el2NcbRIdD8vXPnGe9M/RBTIKcX9UJEwSp7v3if2TneEE9ylVAqsN02lTUOy+CSvlWnSMq3qlwR8Nbw5lDvVAPMNzlBg3CIERqQBzRPkXhNuOBiARSKE3TVomMuE4SFrU3PMhxCSx4v38BVoNw1BSlXSOcaGHXYOUrIGFoW7KpgRTZQyBMkEtm6CBjBicCbWQ42ptTy9uURhjD0hrszOrcoB2JaHVEc4Bsd/JKGeqo7coqObZFgJFLjF5aODSwMI5gVjGYkTqkAlMtmKrZ+Rx3Uj3VTcPXhilhNptOF2rZi5jEQbu+voaJsNMSvIk/3wimq6AMii8Psu51a9F2GHdrt64tR1el3CTHjYrrTYp/eG+yvm2oXG159ZQZv9WHGTpPoBApZwoHmlJfEcYrSNkz9jLjCI+Srgd6b1dbPtpdi//CU3tAKPmwtU56oneYV9siFYdyHVUxhzrxVBqabe7Yvft/tTPFtRSh5raGI/eINJOcDLaJuUV89Q3S40vauic8+HRI+IUWYXtaDxdF87ruBY4u3syKgqiSGoem7uU1He1kwegwn3GExw12j+gcn3/LZTQcCjuuvocfo11mJUx7LZSZJ/j0tsb/wCxTOywsE45Kmv0WETTqzUebJqCQsYH4Px0y1xp/qCiY4UeVlvQ+B5zgC/t+PK2uYFY0ZgaalFjiamp5wogFrr0dU7ykfftHvEc1FEYoohrGSHgX6PA6fvkS+I/G7kYu2bN9mTonLdqSZv29O5K0NQrdDffUs78x8V3w8GfY/c2Hu8eHm9u76XQr2YPuZFdrr9sENaqvOl8BnHszNA==</source>
+  </file>
+  <file path="DeepCloneTrait.php" generated-path="DeepCloneTrait.html" hash="7370b6a38c604026de2e6cdfe29e04b7" package="global">
+    <docblock line="0">
+      <description>FlorianWolters\Component\Core\DeepCloneTrait</description>
+      <long-description>PHP Version 5.4</long-description>
+      <tag name="author" line="0" description="Florian Wolters" link="mailto:wolters.fl@gmail.com"/>
+      <tag name="copyright" line="0" description="2011-2014 Florian Wolters (http://blog.florianwolters.de)"/>
+      <tag name="license" line="0" description="LGPL-3.0+" link="http://gnu.org/licenses/lgpl.txt"/>
+      <tag name="link" line="0" description="http://github.com/FlorianWolters/PHP-Component-Core-Cloneable" link="http://github.com/FlorianWolters/PHP-Component-Core-Cloneable"/>
+    </docblock>
+    <trait namespace="FlorianWolters\Component\Core" line="22" package="global">
+      <name>DeepCloneTrait</name>
+      <full_name>\FlorianWolters\Component\Core\DeepCloneTrait</full_name>
+      <docblock line="22">
+        <description>A class uses the {@see DeepCloneTrait} to indicate to the magic `__clone`
+method of a class that it is **legal** for that method to make a **deep*
+field-for-field copy of instances of that class.</description>
+        <long-description></long-description>
+        <tag name="since" line="22" description="Trait available since Release 0.2.0"/>
+      </docblock>
+      <method final="true" abstract="false" static="false" visibility="public" namespace="FlorianWolters\Component\Core" line="36" package="global">
+        <name>__clone</name>
+        <full_name>\FlorianWolters\Component\Core\DeepCloneTrait::__clone()</full_name>
+        <docblock line="36">
+          <description>Creates a copy of this object.</description>
+          <long-description>"copy" means performing a **deep** copy of all of the properties of this
+object.</long-description>
+          <tag name="return" line="36" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="throws" line="36" description="If the object using this trait does&#13;&#10;   not implement {@see CloneableInterface}." type="\FlorianWolters\Component\Core\CloneNotSupportedException">
+            <type>\FlorianWolters\Component\Core\CloneNotSupportedException</type>
+          </tag>
+          <tag name="throws" line="36" description="If an object property of the object&#13;&#10;   using this trait does not implement {@see CloneableInterface}." type="\FlorianWolters\Component\Core\CloneNotSupportedException">
+            <type>\FlorianWolters\Component\Core\CloneNotSupportedException</type>
+          </tag>
+        </docblock>
+      </method>
+    </trait>
+    <source>eJylVe9v2zYQ/e6/4hAEna1FUtp1X9I6y5DuR4BiCNZu+xLApamTxJkiBZJKagT+33ckJceOlaBdD0WikI/v7r07sm9/aut2kifJBBL4VWojmPpHS4fG3lzqptUKlaMvgzfvENtLSQsfDROO8P7I9e/X8DeBhVbwY/a6X71gnau1AYqeE3pSeHsXP7JSXlQNEzLjujkPh7hu10ZUtYNXpy9fpvTj9cHxae1ce5bnS6krogibA2OBs8AjBUdlkZL34Ep1mTZV3m/YXFatzNxnB+9/u36f/pCdft8fVCsIMRwUru6WvsJ835ucdKdbf1LvTxq8YUuJxJVPJoo1aFvG8Xlb30wG938GLpm10FGF4GqE+wuLCPu2b8BpEKoQnDn03x7YsEpw+LRYcI/75MkapAYUoEtgPa2rmQNB/ywkicSKySSBkpoUNno8ETZshXQoSQpKHAorBcoiJWgavsD3yTMLZR1TnKqlPwJLyJQNQ2AFbUIoG9gttdqbA3H1T5TIqEen2avsNBjmAu7RkN1PfDeCQT4SuDRIwq1X1VfhalKkl/8id1mPGsBHHnNE2piy0KIhCY1Q1YO6ZMvCpIxkCK3RhHVi0CXswDee5cKg64yCWy2K7Zqrjb6zEKT8od2Hrm21cVj88plj6/xtuYrZIic13RcWtEQjCo3bvBRKU+eaVmJDg9NPxnbgrhQNVkmjtsm+rgC6WH3+XvR6MCEu7xQwWuDXlpWH36VQTELbLek+QtkpHsrpp3c6C5jYeB+B7i8npD07C6KelnRV0vI2/fTYVzujCzZQ5Tl89AL6YedaOUZDTFPvx16tQaElPqDHha9sBh/CqAbNwo9cEH4CbJfQICl0dMHJHWHVd2Sltlb4Sb+j10N3ZJByRhcd9xArCgQsSzKXHjPMoMp22ejR8CiupRT+TbWzjEpGysIseRSvayjnJN44//6Gsqg+g7tUfvgFFkc+fXwmYguHO9oHUSLjNUS3gFk4XuEa5udwfMtkh7OdVvgQJUyd6RDm8zncCLuIkzLt0Y/h39jBSLrTwh2B79CFyR3stijLlNqBBqlt2cERX3kUSZWPixsiwNLze2/FBubwIiy8OcBuACU9Yl9GsmuDf3Ye1B3Q7q3EJAe+M2PY+jnbbwJiccfkamGQd/Sf9C1Ox0sNLCeje9sLOn1xjPGiP2Wbj29o9sA+0u4h/kfbh9hv/xcoCcb0uGdmYIhnZ2GE73AcHvQ/mWN053B1hOLxNMaW7+MeiOLXZrKZ/Ae5RPYK</source>
+  </file>
+  <package name="global" full_name="global"/>
+  <namespace name="FlorianWolters" full_name="FlorianWolters">
+    <namespace name="Component" full_name="FlorianWolters\Component">
+      <namespace name="Core" full_name="FlorianWolters\Component\Core"/>
+    </namespace>
+  </namespace>
+  <deprecated count="0"/>
+</project>
